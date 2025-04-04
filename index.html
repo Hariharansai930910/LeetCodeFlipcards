@@ -44,6 +44,17 @@
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 1rem;
     }
+	.flip-card-container {
+      perspective: 1000px;
+      width: 100%;
+      max-width: 600px;
+      height: 600px;
+      margin: 0 auto;
+    }
+    .flip-card-front, .flip-card-back {
+      border: 1px solid #ccc;
+      min-height: 500px; /* Ensure minimum height */
+    }
   </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col">
@@ -328,6 +339,11 @@
 
       // Load current problem
       function loadProblem() {
+	    console.log("Loading problem...");
+        const currentProblems = problems[selectedTopicId];
+        console.log("Current problems:", currentProblems);
+        const problem = currentProblems[currentProblemIndex];
+        console.log("Current problem:", problem);
         const currentProblems = problems[selectedTopicId];
         const problem = currentProblems[currentProblemIndex];
         
