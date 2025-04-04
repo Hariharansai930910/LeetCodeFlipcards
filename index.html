@@ -736,13 +736,11 @@
 
       // Load current problem
       function loadProblem() {
-            console.log("Loading problem...");
+        console.log("Loading problem...");
         const currentProblems = problems[selectedTopicId];
         console.log("Current problems:", currentProblems);
         const problem = currentProblems[currentProblemIndex];
         console.log("Current problem:", problem);
-        const currentProblems = problems[selectedTopicId];
-        const problem = currentProblems[currentProblemIndex];
         
         // Update counter and navigation
         problemCounter.textContent = `Problem ${currentProblemIndex + 1} of ${currentProblems.length}`;
